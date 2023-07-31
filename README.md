@@ -30,6 +30,7 @@ With the above requirement I will have the following:
 
 
 # Design Infrastructure
+![image](https://github.com/ThanhLam2396/Problem01/assets/39935839/0645d1df-b3be-49c6-9e7e-bc0ed276b941)
 
 
 
