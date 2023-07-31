@@ -50,7 +50,7 @@ Network infrastructure is designed with different network layers:
 
 The system is designed with multiple AZs in the same Region to ensure availability if one of the AZs fails. These AZs are placed in the same VPC, so the subnets within it can access each other if the route table, NACL is configured.
 
-To increase availability, reliability and Security. Infrastructure is designed with Regions. Networks of two regions can connect to each other. Through the Transit Gateway configuration.
+To increase availability, reliability and Security. Infrastructure is designed with multiple Regions. Networks of two regions can connect to each other. Through the Transit Gateway configuration.
 
 
 ### Web Applications:
@@ -65,7 +65,7 @@ Web Applications is deployed across different AZs and across different Regions. 
 - Aurora DB: Enable Asynchronous Replication Configuration for Aurora DB to ensure data is consistent across regions
 - Amazon EFS: Enable sync data for Amazon EFS across regions using DataSync Service
 
-Web application will be cross Multiple region through Frontdoor to load balance, increase availability and global.
+Web application will be cross Multiple region through CloudFront to load balance, increase availability and global.
 
 
 
@@ -82,8 +82,8 @@ The monitoring system is built based on CloudWatch, SNS, Lamdard...
 ### Logs Centralization System
 
 Centralized syslog built on top of Opensearch, Lamdar, Firehouse, and S3 (we can use other components in AWS)
-- Firehouse and Lamda: will support getting logs from Frontdoor, filtering, converting and storing it to S3. Also push logs to Opensearch.
-- S3 will be the store of logs pulled from Firehouse or any other component that supports storing logs to S3.
+- Firehouse and Lamda: will support getting logs from CloudFront, filtering, converting and storing it to S3. Also push logs to Opensearch.
+- S3 will be the store of logs pushed from Firehouse or any other component that supports storing logs to S3.
 - Opensearch will be used to querylogs and visualize it on the Dashboard. It can also support triggering an alert if a necessary log appears. Often used to alert audit logs, to prevent security problems at the earliest.
 
 ## SUMMARY:
