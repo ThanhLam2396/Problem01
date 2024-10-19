@@ -17,6 +17,7 @@ The state of the design characteristics are considered on the following aspects:
 - Sustainability
 Architecture diagram and Documentation
 
+<img width="1413" alt="Screenshot 2567-10-18 at 20 44 29" src="https://github.com/user-attachments/assets/7e68a4bc-a45f-42c0-85a7-69c9fe2d82b9">
 
 # Resolve Problem
 
